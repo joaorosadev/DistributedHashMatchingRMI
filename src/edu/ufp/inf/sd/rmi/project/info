@@ -1,0 +1,17 @@
+Pressupostos para já:
+    - As passwords usam o algoritmo "SHA-256"
+    - As passwords apenas permitem de os caracteres entre 'a' e 'z' (minúsculos apenas)
+    - Após alguém criar uma tarefa, dá-se um tempo de espera para workers e juntarem à tarefa
+    - Uma vez começada a tarefa, não se podem juntar mais workers
+
+Dúvidas:
+    - Pormenores do observer, onde se verifica o final da task?
+    - Que eventos para além do fim da task dão trigger a um updtade dos observadores?
+    - Membros do State, ObserverImpl e SubjectTaskImpl?
+    - Onde entra o visitor?
+
+Próximo passo:
+    - Create task done, implementar outros workers poderem juntar-se a uma task.
+    - Visitor opcional (KEKW)
+    - Observer vão ter diferentes tipos de work on tasks
+    - Implementar as 3 estratégias (Posso divir linhas de ficheiros em blocos de 50 por exemplo e cada work pega num bloco
